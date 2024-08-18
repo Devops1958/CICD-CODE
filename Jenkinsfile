@@ -160,6 +160,7 @@ pipeline{
     
 
 }
+*/
 
 stage('Deploy helm to k8s'){
     steps{
@@ -176,7 +177,7 @@ stage('Deploy helm to k8s'){
 }
  
     }
-*/
+
     
  
     post {
@@ -249,7 +250,7 @@ stage('Deploy helm to k8s'){
     
     } 
    
-}
+
 
 
 
