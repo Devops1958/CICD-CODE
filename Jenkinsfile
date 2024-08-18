@@ -63,12 +63,13 @@ pipeline{
             }
         }
     }
-/*              
+              
         stage('Trivy Scan'){
             steps{
                  sh "trivy fs --format table -o maven_dependency.html ."
             }
         }
+        
        
      
         stage('Code Package'){
@@ -76,6 +77,7 @@ pipeline{
                 sh 'mvn package'
             }
         }
+        
       
         stage('Upload Jar to Jfrog'){
             steps{
@@ -97,6 +99,7 @@ pipeline{
     }
 
 }
+/*
 
     stage('Docker image Build'){
         steps{
