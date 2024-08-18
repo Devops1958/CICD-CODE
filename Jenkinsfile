@@ -168,7 +168,7 @@ pipeline{
     
    // sh 'helm rollback geo -n dev'
    // sh 'sleep 60'
-   sh 'kubectl delete secret -l owner=helm,name=geo -n dev'
+    sh 'kubectl delete secret -l owner=helm,name=geo -n dev'
     sh 'helm upgrade --install geo geoapp -n dev'
     
 
