@@ -176,8 +176,9 @@ stage('Deploy helm to k8s'){
 }
  
     }
+*/
     
-*/  
+ 
     post {
     always {
         script {
@@ -249,5 +250,6 @@ stage('Deploy helm to k8s'){
     } 
    
 }
+
 
 
