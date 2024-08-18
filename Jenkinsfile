@@ -62,8 +62,8 @@ pipeline{
               }
             }
         }
-/*
-               
+    }
+/*              
         stage('Trivy Scan'){
             steps{
                  sh "trivy fs --format table -o maven_dependency.html ."
@@ -176,8 +176,8 @@ stage('Deploy helm to k8s'){
 }
  
     }
-*/    
-   
+    
+*/  
     post {
     always {
         script {
