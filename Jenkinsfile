@@ -78,7 +78,7 @@ pipeline{
             }
         }
         
-      
+    /*  
         stage('Upload Jar to Jfrog'){
             steps{
                 withCredentials([usernamePassword(credentialsId: "${JFROG_CRED}", \
