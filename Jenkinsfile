@@ -58,7 +58,7 @@ pipeline{
         stage('Quality Gate Check'){
             steps{
               script{
-                 waitForQualityGate abortPipeline: false, credentialsId: "${SONAQUBE_CRED}" 
+                waitForQualityGate abortPipeline: false, credentialsId: "${SONAQUBE_CRED}" 
               }
             }
         }
@@ -66,7 +66,7 @@ pipeline{
               
         stage('Trivy Scan'){
             steps{
-                 sh "trivy fs --format table -o maven_dependency.html ."
+                sh "trivy fs --format table -o maven_dependency.html ."
             }
         }
         
@@ -78,11 +78,11 @@ pipeline{
             }
         }
         
-    /*  
+    
         stage('Upload Jar to Jfrog'){
             steps{
                 withCredentials([usernamePassword(credentialsId: "${JFROG_CRED}", \
-                 usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
+                usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
                     script {
                         // Define the artifact path and target location
                         //def artifactPath = 'target/*.jar'
@@ -250,8 +250,9 @@ pipeline{
                 attachmentsPattern: 'maven_dependency.html, docker_image_report.html'
             )
         }
+    
      }
-     */
+    */
     
     } 
    
