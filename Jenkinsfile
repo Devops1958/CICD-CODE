@@ -52,7 +52,8 @@ pipeline{
                 installationName: "${SONAQUBE_INSTALLATION}" ) {
               sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=${APP_NAME} -Dsonar.projectKey=${APP_NAME} \
                    -Dsonar.java.binaries=. '''
-}
+
+                }
             }
         }
         stage('Quality Gate Check'){
@@ -62,7 +63,7 @@ pipeline{
               }
             }
         }
-    }
+    
        stage('Trivy Scan'){
             steps{
                  sh "trivy fs --format table -o maven_dependency.html ."
@@ -91,10 +92,12 @@ pipeline{
                                  -T ${ARTIFACTPATH} \
                                  ${ARTIFACTORY_URL}/${REPO}/${ARTIFACTTARGETPATH}
                         """
+                    }
+                }
             }
         }
     }
-
+    
 }
 /*
     stage('Docker image Build'){
@@ -247,10 +250,10 @@ pipeline{
             )
         }
     
-     }
-    */
+    }
     
-    } 
+    */
+     
    
 
 
