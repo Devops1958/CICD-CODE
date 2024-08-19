@@ -63,7 +63,7 @@ pipeline{
             }
         }
     }
-    /*         
+           
         stage('Trivy Scan'){
             steps{
                 sh "trivy fs --format table -o maven_dependency.html ."
@@ -99,8 +99,7 @@ pipeline{
     }
 
 }
-
-
+/*
     stage('Docker image Build'){
         steps{
             script{
