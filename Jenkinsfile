@@ -8,7 +8,7 @@ pipeline{
     environment {
       AWS_REGION = 'us-east-1'
       SCANNER_HOME= tool 'sonar'
-      ARTIFACTORY_URL=  'http://ec2-34.201.106.238.compute-1.amazonaws.com:8081/artifactory/'
+      ARTIFACTORY_URL=  'http://ec2-44-203-44-73.compute-1.amazonaws.com:8081/artifactory/'
       REPO = 'geolocation'
       APP_NAME = 'geoapp'
       APP_OWNER = 'cloud_team'
@@ -100,7 +100,7 @@ pipeline{
     }
     
 }
-/*
+
     stage('Docker image Build'){
         steps{
             script{
@@ -181,10 +181,10 @@ pipeline{
 }
 
  
-    }
+/*   
 
     
-    post {
+    post 
     always {
         script {
             def jobName = env.JOB_NAME
@@ -252,8 +252,8 @@ pipeline{
         }
     
     }
-    
     */
+    
      
    
 
