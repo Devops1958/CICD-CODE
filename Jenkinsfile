@@ -63,8 +63,9 @@ pipeline{
                 waitForQualityGate abortPipeline: false, credentialsId: "${SONAQUBE_CRED}" 
               }
             }
+            
         }
-    
+
        stage('Trivy Scan'){
             steps{
                  sh "trivy fs --format table -o maven_dependency.html ."
@@ -77,7 +78,7 @@ pipeline{
             }
         }
         
-    
+
         stage('Upload Jar to Jfrog'){
             steps{
                 withCredentials([usernamePassword(credentialsId: "${JFROG_CRED}", \
@@ -100,7 +101,7 @@ pipeline{
     }
     
 }
-
+/*
     stage('Docker image Build'){
         steps{
             script{
@@ -181,10 +182,10 @@ pipeline{
 }
 
  
-/*   
+   
 
-    
-    post 
+   
+    post
     always {
         script {
             def jobName = env.JOB_NAME
@@ -252,8 +253,10 @@ pipeline{
         }
     
     }
-    */
-    
+   */
+
+
+ 
      
    
 
