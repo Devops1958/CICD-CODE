@@ -46,7 +46,7 @@ pipeline{
             }
         }
         
-        
+        /*
         stage('Sonarqube Scan'){
             steps{
                 withSonarQubeEnv(credentialsId: "${SONAQUBE_CRED}", \
@@ -71,7 +71,7 @@ pipeline{
                  sh "trivy fs --format table -o maven_dependency.html ."
             }
         }
-        
+        */
        stage('Code Package'){
             steps{
                 sh 'mvn package'
