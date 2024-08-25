@@ -71,14 +71,14 @@ pipeline{
                  sh "trivy fs --format table -o maven_dependency.html ."
             }
         }
-        */
+*/        
        stage('Code Package'){
             steps{
                 sh 'mvn package'
             }
         }
         
-
+/*
         stage('Upload Jar to Jfrog'){
             steps{
                 withCredentials([usernamePassword(credentialsId: "${JFROG_CRED}", \
@@ -101,7 +101,7 @@ pipeline{
     }
     
 }
-
+*/
     stage('Docker image Build'){
         steps{
             script{
@@ -250,10 +250,11 @@ pipeline{
                 mimeType: 'text/html',
                 attachmentsPattern: 'maven_dependency.html, docker_image_report.html'
             )
+        */
         }
     
     }
-   */
+   
 
 
  
