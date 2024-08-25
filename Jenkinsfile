@@ -14,7 +14,7 @@ pipeline{
       APP_OWNER = 'cloud_team'
       DOCKER_REPO_NAME = "${APP_NAME}"
       REPO_URL     = 'public.ecr.aws/o0o8c1x3/geoapp'
-      DOCKER_REPO = "${REPO_URL}/${DOCKER_REPO_NAME}"
+      DOCKER_REPO = "${REPO_URL}"
       BRANCH_NAME= 'main'
       GIT_CRED = 'GITHUB_CRED'
       KUBERNETES_CRED = 'KUBERNETES_CRED'
