@@ -84,9 +84,9 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: "${JFROG_CRED}", \
                 usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
                     script {
-                        Define the artifact path and target location
-                        def artifactPath = 'target/*.jar'
-                        def targetPath = "release_${BUILD_ID}.jar"
+                        // Define the artifact path and target location
+                        // def artifactPath = 'target/*.jar'
+                       // def targetPath = "release_${BUILD_ID}.jar"
 
                         // Upload the artifact using curl
                         sh """
