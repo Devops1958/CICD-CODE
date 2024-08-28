@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1
+  repository: public.ecr.aws/o0o8c1x3/geoapp
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
