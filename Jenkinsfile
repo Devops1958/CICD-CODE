@@ -130,7 +130,7 @@ pipeline{
         }
     }
     }
-/* 
+
     stage('Chart Version Update'){
         steps{
          sh "python3 setup_scripts/chartUpdate.py ${BUILD_ID}" 
@@ -184,7 +184,7 @@ pipeline{
  
    
 
-   
+/*   
     post
     always {
         script {
