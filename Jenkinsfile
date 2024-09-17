@@ -165,7 +165,7 @@ pipeline{
 
 }
 
-
+/*
     stage('Deploy helm to k8s'){
        steps{
        kubeconfig(credentialsId: "${KUBERNETES_CRED}" ,caCertificate: '', serverUrl: "${KUBERNETES_URL}") {
