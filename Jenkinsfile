@@ -9,7 +9,7 @@ pipeline{
       AWS_REGION = 'us-east-1'
       SCANNER_HOME= tool 'sonar'
       ARTIFACTORY_URL=  'http://ec2-52-23-233-158.compute-1.amazonaws.com:8081/artifactory/'
-      REPO = 'geoapp'
+      REPO = 'geolocation'
       APP_NAME = 'geoapp'
       APP_OWNER = 'cloud_team'
       DOCKER_REPO_NAME = "${APP_NAME}"
