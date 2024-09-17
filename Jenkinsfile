@@ -149,8 +149,8 @@ pipeline{
                  usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
                     script {
                         // Define the artifact path and target location
-                        //def artifactPath = 'geo-app-${BUILD_ID}.tgz'
-                        //def targetPath = "heml/geo-app-${BUILD_ID}.tgz"
+                        //def artifactPath = 'geoapp-${BUILD_ID}.tgz'
+                        //def targetPath = "heml/geoapp-${BUILD_ID}.tgz"
 
                         // Upload the artifact using curl
                         sh """
