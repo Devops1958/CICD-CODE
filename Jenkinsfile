@@ -153,11 +153,11 @@ pipeline{
                         //def targetPath = "heml/geoapp-${BUILD_ID}.tgz"
 
                         // Upload the artifact using curl
-                        sh '
+                        sh '''
                             curl -u ${ARTIFACTORY_USER}:${ARTIFACTORY_PASSWORD} \
                                  -T ${HELMARTIFACTPATH} \
                                  ${ARTIFACTORY_URL}/${REPO}/${HELMARTIFACTTARGET}
-                        '
+                        '''
             }
         }
     }
