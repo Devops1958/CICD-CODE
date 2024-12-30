@@ -21,7 +21,7 @@ pipeline{
       KUBERNETES_URL = 'https://104.237.133.213:6443'
       SONAQUBE_CRED = 'sonarqube_ID'
       SONAQUBE_INSTALLATION = 'Sonarqube'
-      JFROG_CRED = 'jfrog_cred'
+      JFROG_CRED = 'JFROG_CRED'
       PROJECT_URL = 'https://github.com/Devops1958/CICD-CODE.git'
       ARTIFACTPATH = 'target/*.jar'
       ARTIFACTTARGETPATH = "release_${BUILD_ID}.jar"
